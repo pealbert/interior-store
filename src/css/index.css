@@ -11,6 +11,8 @@
 }
 
 @theme {
+	--font-montserrat: var(--font);
+
 	--color-border: hsl(var(--border));
 	--color-background: hsl(var(--background));
 	--color-foreground: hsl(var(--foreground));
@@ -87,6 +89,7 @@
 
 @layer base {
 	:root {
+		--font: "Montserrat", sans-serif;
 		--background: 210 40% 98%;
 		--foreground: 222 47% 11%;
 
@@ -201,8 +204,11 @@
 
 @utility progress-bar {
 	@apply hidden md:block z-1000 fixed top-0 right-0 md:w-1.5 bg-primary h-full origin-top animate-grow-progress;
-
 	animation-timeline: scroll(root block);
+}
+
+@utility wrapper {
+	@apply w-full flex flex-col overflow-hidden font-montserrat font-normal;
 }
 
 #root {

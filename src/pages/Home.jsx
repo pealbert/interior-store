@@ -1,11 +1,16 @@
-import { Footer } from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
+import { FooterSection } from "@/components/FooterSection";
+import { HeaderSection } from "@/components/HeaderSection";
 
 export const Home = () => {
 	return (
-		<>
-			<Navbar />
-			<Footer />
-		</>
+		<div className="wrapper">
+			<HeaderSection />
+
+			<main>
+
+			</main>
+			
+			<FooterSection />
+		</div>
 	);
 };

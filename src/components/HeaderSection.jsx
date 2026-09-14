@@ -1,4 +1,4 @@
-export const Navbar = () => {
+export const HeaderSection = () => {
 	return (
 		<>
 			Navbar
