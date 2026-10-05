@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Montserrat";
+	src:
+		url(./assets/fonts/Montserrat.woff2) format("woff2"),
+		url(./assets/fonts/Montserrat.woff) format("woff");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme {
+	--font-montserrat: "Montserrat", sans-serif;
+	--color-accent: #ca5252;
+	--color-success: #5f8f67;
+}
+
+@layer base {
+	* {
+		box-sizing: border-box;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	html {
+		scroll-behavior: smooth;
+		-webkit-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+	}
+
+	body {
+		min-width: 20rem;
+		margin: 0;
+		font-family: "Montserrat", sans-serif;
+		font-feature-settings:
+			"rlig" 1,
+			"calt" 1;
+		color: #222;
+		background: #fff;
+	}
+
+	button {
+		font: inherit;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	::selection {
+		color: #fff;
+		background: #ca5252;
+	}
+
+	:focus:not(:focus-visible) {
+		outline: none;
+	}
+
+	:focus-visible {
+		outline: 2px solid #ca5252;
+		outline-offset: 3px;
+	}
+}
+
+#root {
+	min-height: 100vh;
+}
